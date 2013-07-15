@@ -1,0 +1,25 @@
+<head>
+  <title>tuto-streams</title>
+</head>
+
+<body>
+  {{renderPage}}
+</body>
+
+<template name="roomList">
+  <h1>On va où ?</h1>
+  <ul>
+  {{#each rooms}}
+    <li><a href="{{roomPath}}/{{roomId}}">{{roomId}}</a></li>
+  {{/each}}
+  </ul>
+</template>
+
+<template name="room">
+  <h1>Qué tu dis ?</h1>
+  <ul>
+  {{#each conversations}}
+  <li>{{msg}}</li>
+  {{/each}}
+  </ul>
+</template>
